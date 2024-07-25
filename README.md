@@ -1,6 +1,6 @@
 # Action-Recognition-on-UCF101-Dataset
 **1. Data Processing**
-Dataset link : [[https://www.crcv.ucf.edu/data/UCF101.php](url)](https://www.crcv.ucf.edu/data/UCF101.php)
+Dataset link : https://www.crcv.ucf.edu/data/UCF101.php
 
 Began by selecting a subset of 40 classes from the UCF101 dataset, focusing on a diverse range of actions to ensure robust model training and evaluation.
 The video data is preprocessed and converted into dataframes that can be efficiently utilized by our deep learning model.
