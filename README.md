@@ -1,56 +1,79 @@
-# Action-Recognition-on-UCF101-Dataset
-**1. Data Processing**
+# 🎬 Action Recognition on UCF101 Dataset
 
-Dataset link : https://www.crcv.ucf.edu/data/UCF101.php
+## 📌 Overview
 
-Began by selecting a subset of 40 classes from the UCF101 dataset, focusing on a diverse range of actions to ensure robust model training and evaluation.
+This project focuses on human action recognition using the UCF101 dataset, which consists of 101 action categories. The model is built using ResNet-50 as an encoder for feature extraction and LSTM as a decoder to capture temporal dependencies in videos.
 
-The video data is preprocessed and converted into dataframes that can be efficiently utilized by our deep learning model.
+The goal is to create an efficient deep learning pipeline that can accurately classify various human activities from video sequences.
 
-This conversion involves extracting frames from videos and organizing them in a structured format suitable for training.
+**Dataset link :** https://www.crcv.ucf.edu/data/UCF101.php
 
-Two samples from the dataset, along with their corresponding captions, are plotted to provide a visual reference of the data.
+## 🚀 Features
 
-The processed data is split into training and validation sets to facilitate model training and evaluation.
+**✅ 🎥 Video Preprocessing**
 
-**2. Model Building**
+Extracts frames from videos and organizes them into a structured format for training.
 
+Converts video data into efficient dataframes for deep learning models.
 
-**Encoder - ResNet-50**
+**✅ 🧠 Deep Learning Model**
 
-The ResNet-50 model is employed as the CNN encoder for feature extraction.
+ResNet-50 Encoder: Extracts spatial features from video frames.
 
-Pretrained weights on ImageNet are used to leverage transfer learning and enhance the model's performance on action recognition.
+LSTM Decoder: Captures temporal relationships between frames.
 
-**Decoder - LSTM**
+Transfer Learning: Utilizes pretrained ImageNet weights for better performance.
 
-A 2-layer LSTM model is added as the decoder to capture temporal dependencies in the video sequences.
+**✅ 📊 Training & Evaluation**
 
-Additional layers, such as Dense and Dropout, are incorporated to refine the model's predictions and prevent overfitting.
+Loss & Accuracy Graphs: Monitors training performance.
 
-**3. Model Compilation**
+Confusion Matrix: Visualizes model performance across action classes.
 
+Classification Report: Includes precision, recall, and F1-score for in-depth evaluation.
 
-The model is compiled using an Adam optimizer with a carefully chosen learning rate to ensure stable and efficient training.
+**✅ 📈 Optimized Training Strategy**
 
-Categorical cross-entropy is selected to measure the discrepancy between the predicted and actual action classes.
+Uses Adam optimizer for efficient convergence.
 
-Other hyperparameters, such as batch size and learning rate decay, are configured to optimize the model's performance.
+Categorical cross-entropy for multi-class classification.
 
-**4. Model Training**
+Fine-tuned hyperparameters like batch size, learning rate decay, and dropout layers to prevent overfitting.
 
+## 📖 How It Works?
 
-The model is trained for a specified number of epochs, with the training process carefully monitored to prevent overfitting and underfitting.
+**1️⃣ Data Processing**
 
-The training and validation loss for each epoch is printed to track the model's learning progress.
+Selects 40 diverse action classes from UCF101.
 
-The loss and accuracy history graphs for both the training and validation sets are plotted to visualize the model's performance over time.
+Converts video data into structured dataframes for training.
 
-**5. Model Evaluation**
+Splits dataset into training and validation sets.
 
+**2️⃣ Model Architecture**
 
-The trained model is evaluated using a test set, with random samples selected to demonstrate the model's action recognition capabilities.
+ResNet-50 Encoder: Extracts meaningful spatial features.
 
-Confusion Matrix: A confusion matrix is generated to visualize the performance of the model across different action classes.
+LSTM Decoder: Captures motion across video frames.
 
-Classification Report: A detailed classification report, including precision, recall, and F1-score, is printed to provide a comprehensive evaluation of the model's performance.
+Dense & Dropout Layers: Improves generalization.
+
+**3️⃣ Model Training**
+
+Optimized using Adam optimizer with learning rate decay.
+
+Tracks training/validation loss and accuracy to ensure stability.
+
+**4️⃣ Model Evaluation**
+
+Confusion Matrix for class-wise performance visualization.
+
+Classification Report for detailed precision, recall, and F1-score.
+
+## 📊 Results & Performance
+
+Achieved high accuracy on selected 40 action classes.
+
+Model effectively distinguishes between similar human actions.
+
+Learning curves demonstrate stable training without overfitting.
